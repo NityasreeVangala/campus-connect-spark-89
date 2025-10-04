@@ -33,7 +33,8 @@ const JobCard = ({
   onDelete,
 }: JobCardProps) => {
   return (
-    <Card className="group hover:shadow-lg transition-smooth border-border hover:border-primary/50 animate-scale-in">
+    <Card className="group hover:shadow-lg transition-spring border-border hover:border-primary/50 animate-scale-in gradient-card hover-lift">
+
       <CardHeader>
         <div className="flex items-start justify-between">
           <div className="space-y-2 flex-1">
@@ -80,7 +81,7 @@ const JobCard = ({
         {role === "student" && onApply && (
           <Button
             onClick={() => onApply(id)}
-            className="flex-1 hero-gradient hover:shadow-glow transition-smooth"
+            className="flex-1 gradient-primary hover:shadow-glow-primary transition-spring hover:scale-105"
           >
             Apply Now
           </Button>

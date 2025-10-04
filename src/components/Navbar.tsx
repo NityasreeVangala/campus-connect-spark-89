@@ -49,10 +49,10 @@ const Navbar = ({ isAuthenticated = false, userRole = null, onLogout }: NavbarPr
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center transition-transform group-hover:scale-110">
+            <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center transition-spring group-hover:scale-110 shadow-glow-primary">
               <Briefcase className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+            <span className="text-xl font-bold gradient-rainbow bg-clip-text text-transparent">
               CampusCatalyst
             </span>
           </Link>
@@ -87,7 +87,7 @@ const Navbar = ({ isAuthenticated = false, userRole = null, onLogout }: NavbarPr
                   </Button>
                 </Link>
                 <Link to="/register">
-                  <Button className="hero-gradient transition-smooth hover:shadow-glow">
+                  <Button className="gradient-primary transition-spring hover:shadow-glow-primary hover:scale-105">
                     Get Started
                   </Button>
                 </Link>
