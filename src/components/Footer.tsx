@@ -1,0 +1,102 @@
+import { Briefcase, Mail, Linkedin, Twitter, Github } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const Footer = () => {
+  return (
+    <footer className="bg-muted/30 border-t border-border">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center">
+                <Briefcase className="w-4 h-4 text-primary-foreground" />
+              </div>
+              <span className="text-lg font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+                CampusCatalyst
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Empowering students, recruiters, and placement cells with smart campus recruitment solutions.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/login" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  Register
+                </Link>
+              </li>
+              <li>
+                <a href="#features" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  Features
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">For</h3>
+            <ul className="space-y-2">
+              <li className="text-sm text-muted-foreground">Students</li>
+              <li className="text-sm text-muted-foreground">Recruiters</li>
+              <li className="text-sm text-muted-foreground">Placement Cells</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Connect</h3>
+            <div className="flex gap-3">
+              <a
+                href="mailto:contact@campuscatalyst.com"
+                className="w-9 h-9 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth flex items-center justify-center"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth flex items-center justify-center"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth flex items-center justify-center"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth flex items-center justify-center"
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} CampusCatalyst. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
